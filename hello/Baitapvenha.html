@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculations</title>
+</head>
+<body>
+    <h1>Math Calculations</h1>
+
+    <!-- Tính tổng từ 1 đến n -->
+    <h2>1. Tính tổng từ 1 đến n</h2>
+    <label for="sum-n">Nhập số n:</label>
+    <input type="number" id="sum-n" min="1">
+    <button onclick="calculateSum()">Tính tổng</button>
+    <p>Kết quả: <span id="sum-result"></span></p>
+
+    <!-- Tính giai thừa của n -->
+    <h2>2. Tính giai thừa của n</h2>
+    <label for="factorial-n">Nhập số n:</label>
+    <input type="number" id="factorial-n" min="0">
+    <button onclick="calculateFactorial()">Tính giai thừa</button>
+    <p>Kết quả: <span id="factorial-result"></span></p>
+
+    <!-- Tính chu vi và diện tích hình tròn -->
+    <h2>3. Tính chu vi và diện tích hình tròn</h2>
+    <label for="radius">Nhập bán kính:</label>
+    <input type="number" id="radius" min="0" step="0.01">
+    <button onclick="calculateCircle()">Tính</button>
+    <p>Chu vi: <span id="circumference-result"></span></p>
+    <p>Diện tích: <span id="area-result"></span></p>
+
+    <!-- Tính vận tốc -->
+    <h2>4. Tính vận tốc</h2>
+    <label for="distance">Nhập quãng đường (km):</label>
+    <input type="number" id="distance" min="0" step="0.01">
+    <label for="time">Nhập thời gian (giờ):</label>
+    <input type="number" id="time" min="0" step="0.01">
+    <button onclick="calculateVelocity()">Tính vận tốc</button>
+    <p>Vận tốc: <span id="velocity-result"></span> km/h</p>
+
+    <script>
+        // Tính tổng từ 1 đến n
+        function calculateSum() {
+            let n = parseInt(document.getElementById("sum-n").value);
+            let sum = (n * (n + 1)) / 2;
+            document.getElementById("sum-result").innerText = sum;
+        }
+
+        // Tính giai thừa của n
+        function calculateFactorial() {
+            let n = parseInt(document.getElementById("factorial-n").value);
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            document.getElementById("factorial-result").innerText = factorial;
+        }
+
+        // Tính chu vi và diện tích hình tròn
+        function calculateCircle() {
+            let radius = parseFloat(document.getElementById("radius").value);
+            let circumference = 2 * Math.PI * radius;
+            let area = Math.PI * radius * radius;
+            document.getElementById("circumference-result").innerText = circumference.toFixed(2);
+            document.getElementById("area-result").innerText = area.toFixed(2);
+        }
+
+        // Tính vận tốc
+        function calculateVelocity() {
+            let distance = parseFloat(document.getElementById("distance").value);
+            let time = parseFloat(document.getElementById("time").value);
+            let velocity = distance / time;
+            document.getElementById("velocity-result").innerText = velocity.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Sales Management System</title>
+    <link rel="stylesheet" href="btcn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <h1><img src="logo.jpg" alt="Logo" style="height: 40px; vertical-align: middle;"> Phone Store</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
+                <li><a href="giohang.html">Giỏ Hàng</a></li> <!-- Link to the cart page -->
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Start Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="thiet-ke-cua-hang-dien-thoai-12(1).jpg" alt="Image 1" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="thiet-ke-cua-hang-dien-thoai-13(2).jpg" alt="Image 2" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="thiet-ke-noi-that-shop-showroom-dien-thoai-aeros-01.jpg" alt="Image 3" class="d-block w-100">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- End Carousel -->
+
+    <main>
+        <h2>Welcome to Phone Store!</h2>
+        <p>Discover the latest and hottest phones available in our store.</p>
+    </main>
+
+    <section class="products">
+        <h2>Featured Products</h2>
+        <div class="product-gallery">
+            <div class="product-item">
+                <img src="iphone.jpg" alt="Iphone">
+                <p>Iphone 16 Pro</p>
+                <span class="price">28,990,000 ₫</span>
+                <a href="thanhtoan.html"><button>Mua Ngay</button></a>
+                
+            </div>
+            <div class="product-item">
+                <img src="Redmi-note12.webp" alt="Redmi Note">
+                <p>Redmi Note 12 5G</p>
+                <span class="price">4,190,000 ₫</span>
+                <a href="thanhtoan.html"><button>Mua Ngay</button></a>
+            </div>
+            <div class="product-item">
+                <img src="note-12-blue_1679648221.jpg.jpg" alt="Xiaomi">
+                <p>Xiaomi Redmi Note 12</p>
+                <span class="price">5,999,000 đ</span>
+                <a href="thanhtoan.html"><button>Mua Ngay</button></a>
+            </div>
+            <div class="product-item">
+                <img src="samsung.webp" alt="Samsung">
+                <p>Samsung Galaxy S24 Ultra</p>
+                <span class="price">4,333,555 đ</span>
+                <a href="thanhtoan.html"><button>Mua Ngay</button></a>
+            </div>
+            <div class="product-item">
+                <img src="nokia.jpg" alt="Nokia">
+                <p>Nokia 1280</p>
+                <span class="price">15,000,000 đ</span>
+                <a href="thanhtoan.html"><button>Mua Ngay</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Phone Store. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Logout functionality
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "trangdn.html";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    font-family: Roboto,sans-serif;
+    background: #e2d7aa;
+    color: #000000;
+    font-size: 16px;
+    width: 1180px;
+    line-height:24px;
+    
+    margin: 0 auto; }
+
+header {
+    background-color: #e2cc8b;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin: 30px;
+    text-align: center;
+    }
+
+nav a {
+text-decoration: none;
+font-size: 28px;
+color: #000000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 12px 0 12px;}
+    nav ul li:first-of-type a,
+    nav ul li:last-of-type a {
+    padding-left: 0;
+    color: #0a2d4a;
+    font-weight: bold; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60px;
+    font-family:'Indie Flower',cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 65px;
+    }
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    max-height: 450px;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+article {
+    width: 370px;
+    display: inline-block;}
+
+article img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+article h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+article p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+.comment-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none;
+    }

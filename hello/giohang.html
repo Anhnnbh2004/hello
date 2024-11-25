@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="btcn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><img src="logo.jpg" alt="Logo" style="height: 40px; vertical-align: middle;"> Phone Store</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
+                <li><a href="boong.html">Trang chủ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Giỏ Hàng của Bạn</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div id="cart-total">
+            <h3>Tổng cộng: <span id="total-price">0 đ</span></h3>
+            <button class="btn btn-success" onclick="checkout()">Thanh toán</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Phone Store. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mock cart data (this can be stored in localStorage for persistence)
+        let cart = [
+            { name: "Iphone 16 Pro", price: 28990000, quantity: 1 },
+            { name: "Redmi Note 11 5G", price: 4190000, quantity: 2 }
+        ];
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                totalPrice += item.price * item.quantity;
+                cartItemsContainer.innerHTML += `
+                    <div class="cart-item">
+                        <p>${item.name} x ${item.quantity}</p>
+                        <p>${item.price * item.quantity} đ</p>
+                        <button onclick="removeFromCart('${item.name}')">Remove</button>
+                    </div>
+                `;
+            });
+
+            // Update the total price
+            document.getElementById('total-price').textContent = totalPrice.toLocaleString() + ' đ';
+        }
+
+        function removeFromCart(itemName) {
+            // Remove item from cart by name
+            cart = cart.filter(item => item.name !== itemName);
+            renderCart();
+        }
+
+        function checkout() {
+            // Simulate checkout process
+            alert("Bạn đã thanh toán thành công!");
+            cart = [];  // Clear the cart after checkout
+            renderCart();
+            window.location.href = "boong.html";
+        }
+
+        // Call renderCart to display cart items on page load
+        renderCart();
+
+        // Logout functionality
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

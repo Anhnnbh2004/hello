@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2 style="text-align: center; color:blue">Đăng ký du lịch</h2>
+
+    <form>
+        <table border="1" align="center" style="background-color:antiquewhite">
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" name="fullname" value=""></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="address" value=""></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" name="phone" value=""></td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" name="vietnamese" checked></td>
+            </tr>
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select name="tour">
+                        <option>Hà Đông - Hà Nội</option>
+                        <option>Nam Từ Liêm - Hà Nội</option>
+                        <option>Hoàng Mai - Hà Nội</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="vehicle" value="plane"> Máy bay
+                    <input type="radio" name="vehicle" value="car" checked> Xe ô tô
+                </td>
+            </tr>
+
+        </table>
+
+        <table border="1" align="center">
+            <tr>
+                <td colspan="5"><b>Số lượng đoàn khách</b></td>
+            </tr>
+            <tr>
+                <td>Người lớn</td>
+                <td><input type="text" name="adults" value="" size="2"></td>
+                <td>Trẻ em</td>
+                <td><input type="text" name="children" value="" size="2"></td>
+            </tr>
+        </table>
+
+        <table border="0" align="center">
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea rows="4" cols="40"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div align="center">
+            <input type="submit" value="Đồng ý">
+        </div>
+
+        <p align="center" style="color: orange;">Bạn đã đăng ký thành công!!!</p>
+    </form>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3 style="text-align: center; color: green;">Phiếu đăng ký tham gia chương trình khuyến mại</h3>
+
+    <form>
+        <table border="1" align="center" bgcolor="lightgreen" cellpadding="6" cellspacing="0">
+            <tr>
+                <td><b>Họ và tên:</b></td>
+                <td><input type="text" placeholder="Nguyễn Văn A" name="fullname" size="300"></td>
+            </tr>
+            <tr>
+                <td><b>Địa chỉ:</b></td>
+                <td><input type="text" placeholder="Ngõ 123 - Vũ Tiến" name="address" size="30"></td>
+            </tr>
+            <tr>
+                <td><b>Điện thoại:</b></td>
+                <td><input type="text" placeholder="097623xxx" name="phone" size="30"></td>
+            </tr>
+            <tr>
+                <td><b>Phái:</b></td>
+                <td>
+                    <input type="radio" name="gender" value="Nam"> Nam
+                    <input type="radio" name="gender" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><b>Nghề nghiệp:</b></td>
+                <td>
+                    <select name="job">
+                        <option value="ky_su">Kỹ sư</option>
+                        <option value="giao_vien">Giáo viên</option>
+                        <option value="bac_si">Bác sĩ</option>
+                        <option value="hoc_sinh">Học sinh</option>
+                        <option value="cong_nhan">Công nhân</option>
+                        <option value="khac">Khác</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Đăng ký">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+   
+    <h2 style="color:blue">Contact Us</h2>
+    <form>
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>Họ tên <span style="color: red">*</span></td>
+                <td><input type="text" name="name" placeholder="Nhập họ tên"></td>
+                <td>E-mail <span style="color: red">*</span></td>
+                <td><input type="email" name="email" placeholder="Nhập email"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" name="phone" placeholder="Nhập số điện thoại"></td>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="address" placeholder="Nhập địa chỉ"></td>
+            </tr>
+            <tr>
+                <td>Chọn một dịch vụ <span style="color: red">*</span></td>
+                <td colspan="3">
+                    <select name="service">
+                        <option value="">Dịch vụ 1</option>
+                        <option value="service1">Dịch vụ 2</option>
+                        <option value="service2">Dịch vụ 3</option>
+                        <option value="service3">Dịch vụ 4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nội dung</td>
+                <td colspan="3"><textarea name="message" rows="4" cols="50" placeholder="Nhập nội dung"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" name="terms"> Tôi đã đọc và đồng ý với điều khoản
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <input type="submit" value="Gửi">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <p>(*): Thông tin bắt buộc phải nhập</p>
+</body>
+</html>

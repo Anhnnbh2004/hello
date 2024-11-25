@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="btcn.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng Nhập</h2>
+        
+        <!-- Hiển thị thông báo -->
+        <div id="message" style="color: red; display: none;"></div>
+        
+        <form id="loginForm">
+            <label for="username">Tên Đăng Nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật Khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <p>Chưa có tài khoản? <a href="trangdangky.html">Đăng ký tại đây</a></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Ngăn tải lại trang
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const message = document.getElementById("message");
+
+            // Lấy thông tin người dùng từ localStorage
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                message.style.color = "green";
+                message.textContent = "Đăng nhập thành công!";
+                message.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "boong.html"; // Chuyển hướng tới trang chủ
+                }, 1500);
+            } else {
+                message.style.color = "red";
+                message.textContent = "Đăng nhập thất bại! Vui lòng kiểm tra lại.";
+                message.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

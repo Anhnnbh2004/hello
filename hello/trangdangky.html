@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="btcn.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng Ký</h2>
+        
+        <!-- Hiển thị thông báo -->
+        <div id="message" style="color: red; display: none;"></div>
+        
+        <form id="registerForm">
+            <label for="username">Tên Đăng Nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Mật Khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Đăng Ký</button>
+        </form>
+        <p>Đã có tài khoản? <a href="trangdn.html">Đăng nhập tại đây</a></p>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Ngăn tải lại trang
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const message = document.getElementById("message");
+
+            if (username && email && password) {
+                // Lưu thông tin người dùng vào localStorage
+                const user = { username, email, password };
+                localStorage.setItem("user", JSON.stringify(user));
+
+                message.style.color = "green";
+                message.textContent = "Đăng ký thành công! Vui lòng đăng nhập.";
+                message.style.display = "block";
+
+                setTimeout(() => {
+                    window.location.href = "trangdn.html"; // Chuyển hướng tới trang đăng nhập
+                }, 1500);
+            } else {
+                message.style.color = "red";
+                message.textContent = "Đăng ký thất bại! Vui lòng thử lại.";
+                message.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
